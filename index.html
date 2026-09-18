@@ -294,75 +294,147 @@
     /* Phone mockup */
     .phone-wrap { display: flex; justify-content: center; }
     .phone {
-      width: 196px;
-      background: white;
-      border-radius: 38px;
-      border: 2.5px solid #1C2B3A;
-      box-shadow: 0 28px 64px rgba(0,0,0,0.18);
+      width: 230px;
+      background: #F7F3EC;
+      border-radius: 40px;
+      border: 3px solid #1C2B3A;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.22), 0 0 0 1px rgba(0,0,0,0.06);
       overflow: hidden;
       position: relative;
     }
-    .phone-notch {
-      width: 64px;
-      height: 20px;
+    /* Status bar */
+    .phone-statusbar {
       background: #1C2B3A;
-      border-radius: 0 0 14px 14px;
-      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 14px 6px;
+      font-size: 7.5px;
+      color: white;
+      font-weight: 600;
     }
-    .phone-screen {
-      padding: 10px 10px 0;
+    .phone-statusbar-icons {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      opacity: 0.9;
+    }
+    /* Notch pill */
+    .phone-notch {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 18px;
+      background: #1C2B3A;
+      border-radius: 0 0 12px 12px;
+      z-index: 10;
+    }
+    /* Top nav */
+    .phone-topnav {
       background: #F7F3EC;
-      min-height: 360px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 12px 6px;
+    }
+    .phone-back {
+      font-size: 8px;
+      color: var(--navy);
+      font-weight: 600;
+    }
+    .phone-moonbtn {
+      width: 20px;
+      height: 20px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    /* Page title */
+    .phone-pagetitle {
+      padding: 4px 12px 10px;
+    }
+    .phone-pagetitle-date {
+      font-size: 12px;
+      font-weight: 700;
+      color: #1C2B3A;
+      line-height: 1.2;
+    }
+    .phone-pagetitle-meta {
+      font-size: 7.5px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    /* Screen scroll area */
+    .phone-screen {
+      padding: 0 10px 0;
+      background: #F7F3EC;
+      max-height: 370px;
+      overflow: hidden;
     }
     .phone-verse {
       background: var(--navy);
-      border-radius: 10px;
-      padding: 10px 11px;
+      border-radius: 12px;
+      padding: 11px 13px;
       margin-bottom: 10px;
     }
     .phone-verse-ref {
       font-size: 7.5px;
       font-weight: 700;
-      color: rgba(255,255,255,0.65);
+      color: rgba(255,255,255,0.6);
       text-transform: uppercase;
-      letter-spacing: 0.06em;
-      margin-bottom: 4px;
+      letter-spacing: 0.07em;
+      margin-bottom: 5px;
     }
     .phone-verse-text {
       font-size: 8.5px;
       color: white;
-      line-height: 1.5;
+      line-height: 1.55;
     }
     .phone-label {
       font-size: 7px;
       font-weight: 700;
       color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
       margin-bottom: 3px;
       padding: 0 2px;
     }
     .phone-label.right { text-align: right; }
+    .phone-ai-heading {
+      font-size: 8.5px;
+      font-weight: 700;
+      color: #1C2B3A;
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
     .phone-bubble {
-      background: white;
+      background: #EFEAF9;
       border-radius: 10px 10px 10px 3px;
-      padding: 8px 10px;
+      padding: 9px 11px;
       margin-bottom: 8px;
       font-size: 8px;
-      color: #4A5568;
-      line-height: 1.55;
-      max-width: 88%;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+      color: #26313F;
+      line-height: 1.6;
+      max-width: 92%;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     }
     .phone-bubble.user {
       background: var(--navy);
       color: white;
       border-radius: 10px 10px 3px 10px;
       margin-left: auto;
-      max-width: 78%;
+      max-width: 80%;
     }
-    .phone-bottom {
+    /* Input bar */
+    .phone-inputbar {
       background: white;
-      border-top: 1px solid var(--border);
-      padding: 8px 10px;
+      border-top: 1px solid #E7E1D6;
+      padding: 7px 10px;
       display: flex;
       gap: 6px;
       align-items: center;
@@ -370,8 +442,9 @@
     .phone-input {
       flex: 1;
       height: 22px;
-      background: #F7F8FA;
-      border-radius: 12px;
+      background: #F7F3EC;
+      border-radius: 11px;
+      border: 1px solid #E7E1D6;
       font-size: 7px;
       color: var(--text-muted);
       display: flex;
@@ -388,6 +461,29 @@
       justify-content: center;
       flex-shrink: 0;
     }
+    /* Bottom nav */
+    .phone-bottomnav {
+      background: white;
+      border-top: 1px solid #E7E1D6;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 7px 4px 10px;
+    }
+    .phone-navitem {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      opacity: 0.4;
+    }
+    .phone-navitem.active { opacity: 1; color: var(--navy); }
+    .phone-navitem span {
+      font-size: 6px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+    .phone-navitem.active span { color: var(--navy); }
 
     /* ── Testimonials ── */
     .testimonials { background: var(--bg); }
@@ -636,22 +732,67 @@
       <div class="phone-wrap">
         <div class="phone">
           <div class="phone-notch"></div>
+          <!-- Status bar -->
+          <div class="phone-statusbar">
+            <span>9:41</span>
+            <div class="phone-statusbar-icons">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="white"><path d="M1 6l11 11L23 6"/></svg>
+              <svg width="10" height="7" viewBox="0 0 24 12" fill="white"><rect x="0" y="2" width="4" height="10" rx="1"/><rect x="5" y="1" width="4" height="11" rx="1"/><rect x="10" y="0" width="4" height="12" rx="1"/><rect x="15" y="3" width="4" height="9" rx="1" opacity=".4"/><rect x="20" y="0" width="3" height="12" rx="1" opacity=".2"/></svg>
+              <svg width="14" height="8" viewBox="0 0 24 12" fill="none" stroke="white" stroke-width="2"><rect x="1" y="1" width="19" height="10" rx="2"/><rect x="2" y="2" width="13" height="8" rx="1" fill="white" stroke="none"/><path d="M21 4v4" stroke-width="2.5"/></svg>
+            </div>
+          </div>
+          <!-- Top nav -->
+          <div class="phone-topnav">
+            <span class="phone-back">← Kembali</span>
+            <div class="phone-moonbtn">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="#2C4468"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+            </div>
+          </div>
+          <!-- Page title -->
+          <div class="phone-pagetitle">
+            <div class="phone-pagetitle-date">19 September 2026</div>
+            <div class="phone-pagetitle-meta">Kamis · 09:41 · Jakarta</div>
+          </div>
+          <!-- Scrollable screen -->
           <div class="phone-screen">
             <div class="phone-verse">
               <div class="phone-verse-ref">Yohanes 15:5</div>
-              <div class="phone-verse-text">"Akulah pokok anggur dan kamulah ranting-rantingnya. Barangsiapa tinggal di dalam Aku..."</div>
+              <div class="phone-verse-text">"Akulah pokok anggur dan kamulah ranting-rantingnya. Barangsiapa tinggal di dalam Aku dan Aku di dalam dia, ia berbuah banyak..."</div>
             </div>
             <div class="phone-label">Teman Selah</div>
-            <div class="phone-bubble">Kata "tinggal" di sini berasal dari kata Yunani <em>menō</em> — bukan sekadar hadir, tapi menetap dengan setia...</div>
+            <div class="phone-bubble">
+              <div class="phone-ai-heading">Yohanes 15:5 — Tinggal, Bukan Sekadar Hadir</div>
+              Kata "tinggal" di sini dari kata Yunani <em>menō</em> — bukan sekadar hadir, tapi menetap. Yesus berbicara malam sebelum ditangkap, mengingatkan murid-murid bahwa kekuatan mereka bukan dari usaha sendiri, tapi dari keterhubungan...
+            </div>
             <div class="phone-label right">Kamu</div>
             <div class="phone-bubble user">Jadi apa artinya "tinggal" dalam keseharian?</div>
             <div class="phone-label">Teman Selah</div>
-            <div class="phone-bubble">Artinya terus terhubung — bukan hanya saat krisis, tapi dalam ritme harian yang kecil-kecil...</div>
+            <div class="phone-bubble">Artinya terus terhubung — bukan hanya saat krisis. Dalam doa kecil pagi hari, dalam jeda sejenak di tengah hari...</div>
           </div>
-          <div class="phone-bottom">
+          <!-- Input bar -->
+          <div class="phone-inputbar">
             <div class="phone-input">Tulis pesanmu...</div>
             <div class="phone-send">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+          <!-- Bottom nav -->
+          <div class="phone-bottomnav">
+            <div class="phone-navitem">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+              <span>Home</span>
+            </div>
+            <div class="phone-navitem active">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+              <span>Journal</span>
+            </div>
+            <div class="phone-navitem">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+              <span>Pengaturan</span>
+            </div>
+            <div class="phone-navitem">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/></svg>
+              <span>Logout</span>
             </div>
           </div>
         </div>
