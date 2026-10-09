@@ -73,7 +73,7 @@
     .mobile-menu { display: none; }
 
     /* ── Hero ── */
-    .hero { position: relative; overflow: hidden; color: #fff; padding: 132px 0 0; text-align: center;
+    .hero { position: relative; overflow: hidden; color: #fff; padding: 132px 0 0; text-align: center; border-radius: 0 0 40px 40px;
       background: radial-gradient(900px 480px at 50% -10%, #3B5A8A 0%, transparent 70%), linear-gradient(180deg, #2C4468 0%, #182033 78%); }
     .hero::before { content: ","; position: absolute; left: -2%; bottom: -26%; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 560px; line-height: 1; color: var(--gold); opacity: .06; pointer-events: none; }
     .hero-pill { display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,.16); background: rgba(255,255,255,.07); font-size: 12px; font-weight: 600; letter-spacing: .04em; color: rgba(255,255,255,.85); }
@@ -98,12 +98,6 @@
     .stage .c-mid { left: 50%; width: 296px; transform: translateX(-50%); z-index: 3; }
     .stage .c-left { left: calc(50% - 372px); width: 262px; transform: rotate(-7deg) translateY(36px); z-index: 2; }
     .stage .c-right { left: calc(50% + 110px); width: 262px; transform: rotate(7deg) translateY(36px); z-index: 2; }
-
-    /* ── Trust strip ── */
-    .trust { background: var(--navy-deep); color: rgba(255,255,255,.78); }
-    .trust .wrap { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 36px; padding: 18px 24px 26px; font-size: 13px; font-weight: 600; }
-    .trust span { display: inline-flex; align-items: center; gap: 8px; }
-    .trust span::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
 
     /* ── Section base ── */
     section { padding: 104px 0; }
@@ -246,10 +240,6 @@
     <div class="card c-mid"><img src="/shots/04-renungan.webp" alt="" width="540" height="960" fetchpriority="high"></div>
   </div>
 </section>
-
-<div class="trust"><div class="wrap">
-  <span>Gratis, tanpa biaya</span><span>Tanpa iklan</span><span>Data tersimpan di Indonesia</span><span>Bisa dicoba tanpa daftar</span>
-</div></div>
 
 <!-- Makna -->
 <section class="meaning">
